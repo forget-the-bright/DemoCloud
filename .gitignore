@@ -14,6 +14,9 @@
 /cloud-provider-payment8002/target/
 /cloud-provider-payment8004/target/
 /cloud-providerconsul-payment8006/target/
-/cloud-stream-rabbitmq-consumer8802/target
-/cloud-stream-rabbitmq-consumer8803/target
-/cloud-stream-rabbitmq-provider8801/target
+/cloud-stream-rabbitmq-consumer8802/target/
+/cloud-stream-rabbitmq-consumer8803/target/
+/cloud-stream-rabbitmq-provider8801/target/
+/cloud-config-center-3344/target/
+/cloud-config-client-3355/target/
+/cloud-config-client-3366/target/
