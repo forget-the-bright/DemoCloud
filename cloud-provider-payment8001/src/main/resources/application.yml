@@ -10,7 +10,12 @@ spring:
     url: jdbc:mysql://localhost:3306/db2020?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
     username: root
     password: root
-
+  zipkin:
+    base-url: http://localhost:9441
+    sleuth:
+      sample:
+        #采样率在0到1之间，1表示全部采集
+        probability: 1
 eureka:
   client:
     register-with-eureka: true #入驻eureka server
