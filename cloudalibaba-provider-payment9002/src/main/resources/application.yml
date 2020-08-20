@@ -7,7 +7,8 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 #配置Nacos地址
+         server-addr: localhost:8848 #配置Nacos地址
+        #server-addr:  62.234.132.219:1111 #配置Nacos集群地址
 
 management:
   endpoints:
