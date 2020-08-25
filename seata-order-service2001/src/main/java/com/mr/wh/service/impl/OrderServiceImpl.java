@@ -5,6 +5,8 @@ import com.mr.wh.domain.Order;
 import com.mr.wh.service.AccountService;
 import com.mr.wh.service.OrderService;
 import com.mr.wh.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
+import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
+    @GlobalTransactional(name = "fsz-create-order",rollbackFor = Exception.class)
     public void create(Order order) {
         log.info("------>开始新建订单");
         dao.create(order);

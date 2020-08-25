@@ -10,13 +10,20 @@ spring:
   application:
     name: seata-order-service
   cloud:
-    alibaba:
-      seata:
-        tx-service-group: default #自定义组名称，需要与seata-server中配置的对应
+#    alibaba: #1.0的时候还需要再这里配置 1.3的已经不需要了
+#      seata:
+#        tx-service-group: default #自定义组名称，需要与seata-server中配置的对应
     nacos:
       discovery:
         server-addr: localhost:8848
-
+seata:
+  application-id: ${spring.application.name}
+  tx-service-group: default
+  service:
+    vgroupMapping:
+      default: default
+    grouplist:
+      default: 127.0.0.1:8091
 
 
 

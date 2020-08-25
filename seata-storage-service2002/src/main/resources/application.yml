@@ -5,9 +5,9 @@ spring:
   application:
     name: seata-storage-service
   cloud:
-    alibaba:
-      seata:
-        tx-service-group: default
+#    alibaba:
+#      seata:
+#        tx-service-group: default
     nacos:
       discovery:
         server-addr: localhost:8848
@@ -18,6 +18,14 @@ spring:
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
 
+seata:
+  application-id: ${spring.application.name}
+  tx-service-group: default
+  service:
+    vgroupMapping:
+      default: default
+    grouplist:
+      default: 127.0.0.1:8091
 logging:
   level:
     io:

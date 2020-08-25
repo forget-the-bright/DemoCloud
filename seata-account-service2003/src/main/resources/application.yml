@@ -5,15 +5,15 @@ spring:
   application:
     name: seata-account-service
   cloud:
-    alibaba:
-      seata:
-        tx-service-group: default
+#    alibaba:
+#      seata:
+#        tx-service-group: default
     nacos:
       discovery:
         server-addr: localhost:8848
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seata_storage?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/seata_account?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
     username: root
     password: root
 #开启fegin 对sentinel 的支持
@@ -29,3 +29,11 @@ logging:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
 
+seata:
+  application-id: ${spring.application.name}
+  tx-service-group: default
+  service:
+    vgroupMapping:
+      default: default
+    grouplist:
+      default: 127.0.0.1:8091
