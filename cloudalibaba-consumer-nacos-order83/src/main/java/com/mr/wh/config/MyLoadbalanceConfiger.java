@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
  */
 @Configuration
 public class MyLoadbalanceConfiger {
+
     //Nacos自带Ribbon，引入RestTemplate
     @Bean
     @LoadBalanced //RestTemplate结合Ribbon做负载均衡一定要加@LoadBalanced

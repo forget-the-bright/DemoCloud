@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class MyRule {
-    @Bean
+  @Bean
   public IRule iRule(){
       return  new RandomRule();
   }

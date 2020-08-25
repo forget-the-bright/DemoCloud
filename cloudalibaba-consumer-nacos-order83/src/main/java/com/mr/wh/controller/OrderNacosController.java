@@ -19,6 +19,7 @@ import javax.annotation.Resource;
 public class OrderNacosController {
     @Value("${service-url.nacos-user-service}")
     private String serverURl;
+
     @Resource
     private RestTemplate restTemplate;
 
